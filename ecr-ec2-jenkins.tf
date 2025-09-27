@@ -30,6 +30,7 @@ resource "github_repository" "githubrepo" {
   visibility = "private"
 }
 
+
 resource "aws_iam_role" "roleforjenkins" {
   name                = "ecr_jenkins_permission"
   managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess", "arn:aws:iam::aws:policy/AdministratorAccess"]
